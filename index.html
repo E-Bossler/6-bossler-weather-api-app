@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <title>weatherBoss</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">weather<span id="boss">Boss</span></h1>
+            <form>
+                <div class="form-group">
+                    <label>Check the weather here:</label>
+                    <input class="form-control" id="citySearch">
+                    <p id="zip">'City, State' or Zip Code</p>
+                </div>
+                <button id="searchButton" type="submit" class="btn btn-primary">Submit</button>
+                <p></p>
+                <button id="clearButton" type="submit" class="btn btn-primary">Clear Search History</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="cityName">
+            Seattle, WA
+        </div>
+        <div class="row">
+            <div class="col-lg-2 weatherDay">
+                <div id="dayZeroDate">
+                    Today
+                </div>
+                <div id="dayZeroIcon">
+                    Icon
+                </div>
+                <div id="dayZeroTemp">
+                    Temp
+                </div>
+                <div id="dayZeroHumidity">
+                    Humidity
+                </div>
+                <div id="dayZeroWindSpeed">
+                    Wind Speed
+                </div>
+                <div id="dayZeroUVIndex">
+                    Uv Index
+                </div>
+            </div>
+            <div class="col-lg-2 weatherDay">
+                <div id="dayOneDate">
+                    Tomorrow
+                </div>
+                <div id="dayOneIcon">
+                    Icon
+                </div>
+                <div id="dayOneTemp">
+                    Temp
+                </div>
+                <div id="dayOneHumidity">
+                    Humidity
+                </div>
+                <div id="dayOneWindSpeed">
+                    Wind Speed
+                </div>
+                <div id="dayOneUVIndex">
+                    Uv Index
+                </div>
+            </div>
+            <div class="col-lg-2 weatherDay">
+                <div id="dayTwoDate">
+                    Date
+                </div>
+                <div id="dayTwoIcon">
+                    Icon
+                </div>
+                <div id="dayTwoTemp">
+                    Temp
+                </div>
+                <div id="dayTwoHumidity">
+                    Humidity
+                </div>
+                <div id="dayTwoWindSpeed">
+                    Wind Speed
+                </div>
+                <div id="dayTwoUVIndex">
+                    Uv Index
+                </div>
+            </div>
+            <div class="col-lg-2 weatherDay">
+                <div id="dayThreeDate">
+                    Date
+                </div>
+                <div id="dayThreeIcon">
+                    Icon
+                </div>
+                <div id="dayThreeTemp">
+                    Temp
+                </div>
+                <div id="dayThreeHumidity">
+                    Humidity
+                </div>
+                <div id="dayThreeWindSpeed">
+                    Wind Speed
+                </div>
+                <div id="dayThreeUVIndex">
+                    Uv Index
+                </div>
+            </div>
+            <div class="col-lg-2 weatherDay">
+                <div id="dayFourDate">
+                    Date
+                </div>
+                <div id="dayFourIcon">
+                    Icon
+                </div>
+                <div id="dayFourTemp">
+                    Temp
+                </div>
+                <div id="dayFourHumidity">
+                    Humidity
+                </div>
+                <div id="dayFourWindSpeed">
+                    Wind Speed
+                </div>
+                <div id="dayFourUVIndex">
+                    Uv Index
+                </div>
+            </div>
+            <div class="col-lg-2 weatherDay">
+                <div id="dayFiveDate">
+                    Date
+                </div>
+                <div id="dayFiveIcon">
+                    Icon
+                </div>
+                <div id="dayFiveTemp">
+                    Temp
+                </div>
+                <div id="dayFiveHumidity">
+                    Humidity
+                </div>
+                <div id="dayFiveWindSpeed">
+                    Wind Speed
+                </div>
+                <div id="dayFiveUVIndex">
+                    Uv Index
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="cityName">
+            Search History
+        </div>
+        <div class="row" id="historyRow">
+        </div>
+        <hr>
+        <div class="row">
+            &copy; 2020 Eric S Bossler
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/script/script.js"></script>
+</body>
+
+</html>

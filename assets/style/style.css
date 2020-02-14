@@ -1,0 +1,41 @@
+/* Heading Styles  */
+
+.jumbotron {
+    background-image: linear-gradient(to bottom, blue, lightskyblue);
+    color: white;
+    text-emphasis: bold;;
+}
+
+#boss {
+    color: gold;
+}
+
+#zip {
+    color: white;
+    text-emphasis: bold;
+}
+
+.btn {
+    background-image: linear-gradient(to top, blue, lightskyblue)
+}
+
+/* Body Styles  */
+
+body {
+    background-color: lightskyblue;
+}
+
+#cityName {
+    font-size: 30px;
+}
+
+/* Weather Card Styles */
+
+.weatherDay {
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 50%;
+}
