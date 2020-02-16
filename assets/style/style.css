@@ -36,6 +36,5 @@ body {
     border-width: 3px;
     border-color: black;
     border-radius: 10px;
-    background-color: white;
-    opacity: 75%;
+    margin: 0 10px 10px 10px;
 }
