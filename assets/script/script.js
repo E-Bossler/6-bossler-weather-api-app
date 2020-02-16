@@ -6,35 +6,32 @@ const dayZeroIcon = document.querySelector('#dayZeroIcon');
 const dayZeroTemp = document.querySelector('#dayZeroTemp');
 const dayZeroHumidity = document.querySelector('#dayZeroHumidity');
 const dayZeroWindSpeed = document.querySelector('#dayZeroWindSpeed');
-
 const dayOneIcon = document.querySelector('#dayOneIcon');
 const dayOneTemp = document.querySelector('#dayOneTemp');
 const dayOneHumidity = document.querySelector('#dayOneHumidity');
 const dayOneWindSpeed = document.querySelector('#dayOneWindSpeed');
-
 const dayTwoDate = document.querySelector('#dayTwoDate');
 const dayTwoIcon = document.querySelector('#dayTwoIcon');
 const dayTwoTemp = document.querySelector('#dayTwoTemp');
 const dayTwoHumidity = document.querySelector('#dayTwoHumidity');
 const dayTwoWindSpeed = document.querySelector('#dayTwoWindSpeed');
-
 const dayThreeDate = document.querySelector('#dayThreeDate');
 const dayThreeIcon = document.querySelector('#dayThreeIcon');
 const dayThreeTemp = document.querySelector('#dayThreeTemp');
 const dayThreeHumidity = document.querySelector('#dayThreeHumidity');
 const dayThreeWindSpeed = document.querySelector('#dayThreeWindSpeed');
-
 const dayFourDate = document.querySelector('#dayFourDate');
 const dayFourIcon = document.querySelector('#dayFourIcon');
 const dayFourTemp = document.querySelector('#dayFourTemp');
 const dayFourHumidity = document.querySelector('#dayFourHumidity');
 const dayFourWindSpeed = document.querySelector('#dayFourWindSpeed');
-
 const dayFiveDate = document.querySelector('#dayFiveDate');
 const dayFiveIcon = document.querySelector('#dayFiveIcon');
 const dayFiveTemp = document.querySelector('#dayFiveTemp');
 const dayFiveHumidity = document.querySelector('#dayFiveHumidity');
 const dayFiveWindSpeed = document.querySelector('#dayFiveWindSpeed');
+
+const dayZeroUVIndex = document.querySelector('#dayZeroUVIndex');
 
 const cityName = document.querySelector('#cityName');
 
@@ -152,8 +149,25 @@ function startPage() {
             dayThreeWindSpeed.innerHTML = `${windSpeedThree} mph wind`;
             dayFourWindSpeed.innerHTML = `${windSpeedFour} mph wind`;
             dayFiveWindSpeed.innerHTML = `${windSpeedFive} mph wind`;
-        });
 
+            let cityLatitude = json.city.coord.lat;
+            let cityLongtiude = json.city.coord.lon;
+
+            let uvIndexUrl = `http://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${cityLatitude}&lon=${cityLongtiude}`;
+
+            fetch(uvIndexUrl)
+                .then(function (response) {
+                    return response.json();
+                }).then(function (uvjson) {
+                    console.log(uvjson);
+
+                    let uvIndexNumber = uvjson.value;
+
+                    dayZeroUVIndex.innerHTML = `UV Index: ${uvIndexNumber}`;
+                }
+                );
+        }
+        )
 }
 
 //waiting on API to work... check tomorrow
@@ -257,7 +271,25 @@ function populateWeather() {
             dayThreeWindSpeed.innerHTML = `${windSpeedThree} mph wind`;
             dayFourWindSpeed.innerHTML = `${windSpeedFour} mph wind`;
             dayFiveWindSpeed.innerHTML = `${windSpeedFive} mph wind`;
-        });
+
+            let cityLatitude = json.city.coord.lat;
+            let cityLongtiude = json.city.coord.lon;
+
+            let uvIndexUrl = `http://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${cityLatitude}&lon=${cityLongtiude}`;
+
+            fetch(uvIndexUrl)
+                .then(function (response) {
+                    return response.json();
+                }).then(function (uvjson) {
+                    console.log(uvjson);
+
+                    let uvIndexNumber = uvjson.value;
+
+                    dayZeroUVIndex.innerHTML = `UV Index: ${uvIndexNumber}`;
+                }
+                )
+        }
+        );
     searchedCity.value = '';
 };
 
@@ -384,9 +416,28 @@ function populateSearchHistory() {
                     dayThreeWindSpeed.innerHTML = `${windSpeedThree} mph wind`;
                     dayFourWindSpeed.innerHTML = `${windSpeedFour} mph wind`;
                     dayFiveWindSpeed.innerHTML = `${windSpeedFive} mph wind`;
-                });
 
-        })
+
+                    let cityLatitude = json.city.coord.lat;
+                    let cityLongtiude = json.city.coord.lon;
+
+                    let uvIndexUrl = `http://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${cityLatitude}&lon=${cityLongtiude}`;
+
+                    fetch(uvIndexUrl)
+                        .then(function (response) {
+                            return response.json();
+                        }).then(function (uvjson) {
+                            console.log(uvjson);
+
+                            let uvIndexNumber = uvjson.value;
+
+                            dayZeroUVIndex.innerHTML = `UV Index: ${uvIndexNumber}`;
+                        }
+                        )
+                }
+                );
+        }
+        )
     }
 };
 
